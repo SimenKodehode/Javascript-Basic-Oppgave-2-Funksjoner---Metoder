@@ -22,7 +22,15 @@ funksjonen)
 ******************************************************************************/
 
 // Skriv koden for oppgave 1 her
-
+function numberChecker(number) {
+  if (number % 2 === 0) {
+    return "Partall";
+  } else {
+    return "Oddetall";
+  }
+}
+console.log(numberChecker(1));
+console.log(numberChecker(2));
 /******************************************************************************
 2.
 
@@ -36,7 +44,11 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 ******************************************************************************/
 
 // Skriv koden for oppgave 2 her
+function largeText(text) {
+  return text.toUpperCase() + "!";
+}
 
+console.log(largeText("Dette er kult"));
 /******************************************************************************
 3.
 
@@ -60,7 +72,22 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 ******************************************************************************/
 
 // Skriv koden for oppgave 3 her
-
+function timeKeeper(name, time) {
+  if (time === undefined) {
+    return "Feil: ingen timeverdi gitt";
+  } else if (time <= 5) {
+    return "god natt" + " " + name;
+  } else if (time <= 11) {
+    return "God morgen" + " " + name;
+  } else if (time <= 17) {
+    return "God dag" + " " + name;
+  } else if (time <= 23) {
+    return "God kveld" + " " + name;
+  } else if (time > 23 || time < 0) {
+    return "Ugyldig tid";
+  }
+}
+console.log(timeKeeper("Simen", -3));
 /******************************************************************************
 4.
 
@@ -77,6 +104,7 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 // Skriv koden for oppgave 4 her
+let array = ["Rød", "Grønn", "Blå", "Gul"];
 
 /******************************************************************************
 5.
