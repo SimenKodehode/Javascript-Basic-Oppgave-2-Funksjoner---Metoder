@@ -75,19 +75,19 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 function timeKeeper(name, time) {
   if (time === undefined) {
     return "Feil: ingen timeverdi gitt";
+  } else if (time < 0 || time > 23) {
+    return "Ugyldig tid";
   } else if (time <= 5) {
-    return "god natt" + " " + name;
+    return "God natt" + " " + name;
   } else if (time <= 11) {
     return "God morgen" + " " + name;
   } else if (time <= 17) {
     return "God dag" + " " + name;
-  } else if (time <= 23) {
+  } else {
     return "God kveld" + " " + name;
-  } else if (time > 23 || time < 0) {
-    return "Ugyldig tid";
   }
 }
-console.log(timeKeeper("Simen", -3));
+console.log(timeKeeper("Simen", 22));
 /******************************************************************************
 4.
 
