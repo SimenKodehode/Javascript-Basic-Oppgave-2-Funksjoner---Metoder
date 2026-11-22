@@ -87,7 +87,12 @@ function timeKeeper(name, time) {
     return "God kveld" + " " + name;
   }
 }
-console.log(timeKeeper("Simen", 22));
+console.log(timeKeeper("Simen", -3)); // Ugyldig tid
+console.log(timeKeeper("Simen", 0)); // God natt Simen
+console.log(timeKeeper("Simen", 10)); // God morgen Simen
+console.log(timeKeeper("Simen", 16)); // God dag Simen
+console.log(timeKeeper("Simen", 23)); // God kveld Simen
+console.log(timeKeeper("Simen", 24)); // Ugyldig tid
 /******************************************************************************
 4.
 
