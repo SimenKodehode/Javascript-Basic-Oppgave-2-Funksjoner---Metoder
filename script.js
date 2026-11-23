@@ -109,8 +109,13 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 ******************************************************************************/
 
 // Skriv koden for oppgave 4 her
-let array = ["Rød", "Grønn", "Blå", "Gul"];
+let colorArray = ["Rød", "Grønn", "Blå", "Gul"];
 
+function arraySort(array) {
+  return array.slice(1, -1);
+}
+
+console.log(arraySort(colorArray));
 /******************************************************************************
 5.
 
