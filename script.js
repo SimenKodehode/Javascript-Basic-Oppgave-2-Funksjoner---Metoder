@@ -24,6 +24,7 @@ funksjonen)
 // Skriv koden for oppgave 1 her
 function numberChecker(number) {
   if (number % 2 === 0) {
+    //sjekker om numberet er partall eller oddetall ved å dele det på 2 og sjekke om det er tall til "overs"
     return "Partall";
   } else {
     return "Oddetall";
@@ -45,7 +46,7 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 // Skriv koden for oppgave 2 her
 function largeText(text) {
-  return text.toUpperCase() + "!";
+  return text.toUpperCase() + "!"; //velger stringen, converterer alt til storskrift og legger tol ! på slutten
 }
 
 console.log(largeText("Dette er kult"));
@@ -74,17 +75,23 @@ Hvis ingen timeverdi mottas, skal funksjonen returnere en feilmelding.
 // Skriv koden for oppgave 3 her
 function timeKeeper(name, time) {
   if (time === undefined) {
+    //ser of tallet er udefinert
     return "Feil: ingen timeverdi gitt";
   } else if (time < 0 || time > 23) {
+    //sjekker at tallet ikkje er mindre enn 0 eller større enn 23
     return "Ugyldig tid";
   } else if (time <= 5) {
+    //sjekker om tallet er mindre eller lik 5
     return "God natt" + " " + name;
   } else if (time <= 11) {
+    //sjekker om tallet er lik eller mindre enn 11
     return "God morgen" + " " + name;
   } else if (time <= 17) {
     return "God dag" + " " + name;
+    //sjekker om tallet er lik eller mindre enn 17
   } else {
     return "God kveld" + " " + name;
+    //sjekker om tallet ikkje faller innenfor noen av dei andre tallene (0-17 og over 23) og returnerer det einaste mulige alternativet
   }
 }
 console.log(timeKeeper("Simen", -3)); // Ugyldig tid
@@ -186,16 +193,17 @@ items.shift(); //fjærner første ordet
 console.log(items);
 
 const index = items.indexOf("Viskelær"); //finner viskelær i indexet
-items[index] = "linjal"; //erstatter det med linjal
+items[index] = "Linjal"; //erstatter det med linjal
 console.log(items);
 
 items.splice(0, 2, "Markeringspenn"); //starter på posisjon 0 i array, fjærner 2 ord, bytter ut med Markeringspenn
 console.log(items);
 
-let merge = items.join(" | "); //syr sammen arrayet til ein string, bytter ut tomrom med (" | ")
+let merge = items.join(" | "); //syr sammen arrayet til ein string, legger til mellomrom som vi bestemmer, i dette tilfelle ville vi ha (" | ")
 console.log(merge);
 
-const includesE = items.filter((item) => item.includes("e"));
+const includesE = items.filter((item) => item.toLowerCase().includes("e"));
+//filter lager eit nytt array med info som returnerer true, i dette eksempelet er det ord som har bokstaven "e" konverterer alle ord til lowercase først i tillfelle noen ord har store bosktaver ettersom koden er "case sensetive"
 console.log(includesE);
 /******************************************************************************
 7.
