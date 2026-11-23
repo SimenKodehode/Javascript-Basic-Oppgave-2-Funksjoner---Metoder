@@ -46,7 +46,7 @@ Eksempel: "Dette er kult" skal returnere "DETTE ER KULT!"
 
 // Skriv koden for oppgave 2 her
 function largeText(text) {
-  return text.toUpperCase() + "!"; //velger stringen, converterer alt til storskrift og legger tol ! på slutten
+  return text.toUpperCase() + "!"; //velger stringen, converterer alt til storskrift og legger til ! på slutten
 }
 
 console.log(largeText("Dette er kult"));
