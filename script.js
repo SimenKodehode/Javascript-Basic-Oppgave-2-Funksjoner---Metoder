@@ -110,12 +110,14 @@ Eksempel 2: ["En", "To", "Tre", "Fire", "Fem", "Seks"] skal returnere
 
 // Skriv koden for oppgave 4 her
 let colorArray = ["Rød", "Grønn", "Blå", "Gul"];
+let numberArray = ["En", "To", "Tre", "Fire", "Fem", "Seks"];
 
 function arraySort(array) {
   return array.slice(1, -1);
 }
 
 console.log(arraySort(colorArray));
+console.log(arraySort(numberArray));
 /******************************************************************************
 5.
 
@@ -136,7 +138,26 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 ******************************************************************************/
 
 // Skriv koden for oppgave 5 her
+// const ekempel1 = "  Javascript er vanskelig   ";
+// const eksempel2 = " Det er vanskelig å bruke metoder ";
+// const eksempel3 = "   vanskelig        ";
 
+// let trimmed1 = ekempel1.trim().replace("vanskelig", "gøy");
+// console.log(trimmed1);
+
+// let trimmed2 = eksempel2.trim().replace("vanskelig", "gøy");
+// console.log(trimmed2);
+
+// let trimmed3 = eksempel3.trim().replace("vanskelig", "gøy");
+// console.log(trimmed3);
+
+function trimReplace(text) {
+  return text.trim().replace("vanskelig", "gøy");
+}
+
+console.log(trimReplace("  Javascript er vanskelig   "));
+console.log(trimReplace(" Det er vanskelig å bruke metoder "));
+console.log(trimReplace("   vanskelig        "));
 /******************************************************************************
 6.
 
