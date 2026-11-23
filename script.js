@@ -113,7 +113,7 @@ let colorArray = ["Rød", "Grønn", "Blå", "Gul"];
 let numberArray = ["En", "To", "Tre", "Fire", "Fem", "Seks"];
 
 function arraySort(array) {
-  return array.slice(1, -1);
+  return array.slice(1, -1); //starter ett ord senere(1 og ikkje 0) og fjørner ett ord frå slutten av arrayet
 }
 
 console.log(arraySort(colorArray));
@@ -152,7 +152,7 @@ Eksempel 3: "   vanskelig        " skal returnere "gøy".
 // console.log(trimmed3);
 
 function trimReplace(text) {
-  return text.trim().replace("vanskelig", "gøy");
+  return text.trim().replace("vanskelig", "gøy"); //tar text og bruker trim for å fjærne tomrom, for å så erstatte vanskelig med gøy
 }
 
 console.log(trimReplace("  Javascript er vanskelig   "));
@@ -182,7 +182,21 @@ Ekstra utfordring: Lag et nytt array som kun inkluderer elementer som inneholder
 ******************************************************************************/
 
 // Skriv koden for oppgave 6 her
+items.shift(); //fjærner første ordet
+console.log(items);
 
+const index = items.indexOf("Viskelær"); //finner viskelær i indexet
+items[index] = "linjal"; //erstatter det med linjal
+console.log(items);
+
+items.splice(0, 2, "Markeringspenn"); //starter på posisjon 0 i array, fjærner 2 ord, bytter ut med Markeringspenn
+console.log(items);
+
+let merge = items.join(" | "); //syr sammen arrayet til ein string, bytter ut tomrom med (" | ")
+console.log(merge);
+
+const includesE = items.filter((item) => item.includes("e"));
+console.log(includesE);
 /******************************************************************************
 7.
 
